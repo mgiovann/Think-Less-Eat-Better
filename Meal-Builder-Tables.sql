@@ -1,0 +1,36 @@
+/*John Konecny
+Final Project Definition*/
+
+/*Clear the existing tables*/
+
+DROP TABLE IF EXISTS `meal_ingredients`;
+DROP TABLE IF EXISTS `meal`;
+DROP TABLE IF EXISTS `ingredients`;
+
+
+
+CREATE TABLE `meal`(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id),
+	UNIQUE KEY(name)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE`ingredients`(
+	nbdno INT UNSIGNED NOT NULL,
+	name VARCHAR(255) NOT NULL,
+	ru VARCHAR(7) NOT NULL,
+	energy FLOAT UNSIGNED NOT NULL,
+	PRIMARY KEY (nbdno)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `meal_ingredients`(
+	ingreId INT UNSIGNED NOT NULL,
+	mealId INT UNSIGNED NOT NULL,
+	amount INT UNSIGNED NOT NULL,
+	PRIMARY KEY (ingreId, mealId),
+	FOREIGN KEY (ingreId) REFERENCES ingredients (nbdno) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY (mealId) REFERENCES meal (id) ON UPDATE CASCADE ON DELETE CASCADE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
