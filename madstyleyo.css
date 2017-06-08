@@ -1,0 +1,74 @@
+	#header{
+	text-align: center;
+	color: darkslategray;
+	font-family: georgia;
+	font-size: 30px;
+	padding-top: 30px;
+	}
+	
+	#name{
+	text-align: center;
+	color: darkslategray;
+	font-family: georgia;
+	font-size: 16px;
+	padding-top: 0px;
+	}
+	
+	a {
+    color: orangered;
+	}
+	
+	#lesserHeader{
+	text-align: left;
+	color: orangered;
+	font-family: georgia;
+	font-size: 30px;
+	padding-top: 30px;
+	}
+	
+	#subHeading{
+	text-align: center;
+	color: darkslategray;
+	font-family: georgia;
+	font-size: 15px;
+	}
+	
+	td{
+		font-size: 14px;
+		text-align: left;
+	}
+	
+	#space{
+		width: 15px;
+	}
+	
+	#formDiv{
+	color: darkslategray;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+
+	}
+	
+	#thumbnailText{
+	color: darkslategray;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: georgia;
+	width: 75%;
+	font-size: 19px;
+	padding-top: 2%;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 8%;
+	}
+	
+	#bg{
+	margin: 0px;
+	background: linear-gradient(white, azure, white);
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	}
