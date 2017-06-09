@@ -31,7 +31,7 @@ include 'config.php';
 		}
 		
 		$username = $_SESSION["username"];
-		$sql = "SELECT username, firstName, lastName, email FROM Users WHERE username='$username'";
+		$sql = "SELECT username, firstName, lastName, email, weight, height, age, activity, sex, breastfeeding FROM Users WHERE username='$username'";
 		$result = mysqli_query($conn, $sql);
 		
 		while($row = mysqli_fetch_assoc($result)) {
@@ -43,6 +43,18 @@ include 'config.php';
 			echo "Last name: ".$row["lastName"];
 			echo "<br><br>";
 			echo "Email address: ".$row["email"];
+			echo "<br><br>";
+			echo "Weight: ".$row["weight"];
+			echo "<br><br>";
+			echo "height: ".$row["height"];
+			echo "<br><br>";
+			echo "age: ".$row["age"];
+			echo "<br><br>";
+			echo "activity level: ".$row["activity"];
+			echo "<br><br>";
+			echo "sex: ".$row["sex"];
+			echo "<br><br>";
+			echo "breastfeeding: ".$row["breastfeeding"];
 		}
 
 		mysqli_close($conn);

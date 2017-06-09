@@ -5,7 +5,7 @@
 	<title>Think Less Eat Better</title>
 	<!--<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 
 </head>
@@ -61,13 +61,58 @@
 				myform.userpassword.focus();
 				return false;
 			}
-	return true;
-}
+			return true;
+		}
 
 
-</script>
+	</script>
 
-<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
+	<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
+		<fieldset>                    
+			<legend>Info</legend>
+			<label>First name</label>
+			<input type = "text"  name = "first" id = "firstname" ><br>	
+			<br>	
+			<label>Last name</label>
+			<input type = "text"  name = "last" id = "lastname" ><br>
+			<br>	
+			<label>Email</label>	
+			<input type = "text"  name = "email" id = "email" ><br><br>	
+			<label>Username</label>	
+			<input type = "text"  name = "user" id = "username" ><br>	
+			<br>						
+			<label>Password</label>	
+			<input type = "password"  name = "password" id = "userpassword" ><br>
+			<br>	
+			<label>Password Confirm</label>
+			<input type = "password"  name = "passwordconfirm" id = "userpasswordconfirm" >
+
+			<br><br><br>
+			<label>Weight (lbs)</label>
+			<input type = "text"  name = "weight" id = "usertextconfirm" >
+			<br><br>
+			<label>Height</label>
+			<input type = "text"  name = "height" id = "usertextconfirm" >
+			<br><br>
+			<label>age</label>
+			<input type = "text"  name = "age" id = "usertextconfirm" >
+			<br><br>
+			<label>activity</label>
+			<input type = "text"  name = "activity" id = "usertextconfirm" >
+			<br><br>
+			<label>sex</label>
+			<input type = "text"  name = "sex" id = "usertextconfirm" >
+			<br><br>
+			<label>Breastfeeding (1 true 0 false)</label>
+			<input type = "text"  name = "breastfeeding" id = "usertextconfirm" >
+			<br><br>
+
+			<br><br>
+			<input type="submit">
+
+		</fieldset>
+	</form>
+<!-- <form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
 	<div class="form-group col-6">
     <label for="firstName">First Name</label>
     <input type="text" id="firstname" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="First Name">
@@ -103,7 +148,7 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   
   
-</form>
+</form> -->
 	<!--
 	<fieldset>                    
 		<legend>Info</legend>
@@ -128,7 +173,7 @@
 		<input type="submit">
 
 	</fieldset>
-	-->
+-->
 </form>
 
 <?php include 'footer.php'; ?>		
