@@ -27,6 +27,7 @@ $passwordEntry = passwordHash($passwordEntry);
 $sql = "SELECT email FROM Users WHERE username='$usernameEntry' and password='$passwordEntry'";
 $result = mysqli_query($conn, $sql);
 $rows = mysqli_num_rows($result);
+$_SESSION["username"] = $rows["username"];
 
 mysqli_close($conn);
 
