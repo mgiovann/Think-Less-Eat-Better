@@ -97,15 +97,7 @@
 			<label>age</label>
 			<input type = "text"  name = "age" id = "usertextconfirm" >
 			<br><br>
-			<label>activity</label>
-			<input type = "text"  name = "activity" id = "usertextconfirm" >
-			<br><br>
-			<label>sex</label>
-			<input type = "text"  name = "sex" id = "usertextconfirm" >
-			<br><br>
-			<label>Breastfeeding (1 true 0 false)</label>
-			<input type = "text"  name = "breastfeeding" id = "usertextconfirm" >
-			<br><br>
+
 
 			<br><br>
 			<input type="submit">

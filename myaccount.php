@@ -50,11 +50,11 @@ include 'config.php';
 			echo "<br><br>";
 			echo "age: ".$row["age"];
 			echo "<br><br>";
-			echo "activity level: ".$row["activity"];
-			echo "<br><br>";
-			echo "sex: ".$row["sex"];
-			echo "<br><br>";
-			echo "breastfeeding: ".$row["breastfeeding"];
+			// echo "activity level: ".$row["activity"];
+			// echo "<br><br>";
+			// echo "sex: ".$row["sex"];
+			// echo "<br><br>";
+			// echo "breastfeeding: ".$row["breastfeeding"];
 		}
 
 		mysqli_close($conn);

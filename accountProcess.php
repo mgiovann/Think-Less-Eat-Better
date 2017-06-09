@@ -47,9 +47,9 @@ function passwordHash($pass) {
 		$weightEntry = $_POST["weight"];
 		$heightEntry = $_POST["height"];
 		$ageEntry = $_POST["age"];
-		$activityEntry = $_POST["activity"];
-		$sexEntry = $_POST["sex"];
-		$breastfeedingEntry = $_POST["breastfeeding"];
+		// $activityEntry = $_POST["activity"];
+		// $sexEntry = $_POST["sex"];
+		// $breastfeedingEntry = $_POST["breastfeeding"];
 
 		$passwordEntry = mysqli_real_escape_string($conn, $passwordEntry);
 		$firstNameEntry = mysqli_real_escape_string($conn, $firstNameEntry);
@@ -59,9 +59,9 @@ function passwordHash($pass) {
 		$weightEntry = mysqli_real_escape_string($conn, $weightEntry);
 		$heightEntry = mysqli_real_escape_string($conn, $heightEntry);
 		$ageEntry = mysqli_real_escape_string($conn, $ageEntry);
-		$activityEntry = mysqli_real_escape_string($conn, $activityEntry);
-		$sexEntry = mysqli_real_escape_string($conn, $sexEntry);
-		$breastfeedingEntry = mysqli_real_escape_string($conn, $breastfeedingEntry);
+		// $activityEntry = mysqli_real_escape_string($conn, $activityEntry);
+		// $sexEntry = mysqli_real_escape_string($conn, $sexEntry);
+		// $breastfeedingEntry = mysqli_real_escape_string($conn, $breastfeedingEntry);
 
 		$_SESSION["username"] = $usernameEntry;
 
@@ -69,7 +69,7 @@ function passwordHash($pass) {
 		$passwordEntry = passwordHash($passwordEntry);
 		
 		//insert
-		$sql = "INSERT INTO Users (username, password, firstName, lastName, email, weight, height, age, activity, sex, breastfeeding) VALUES ('$usernameEntry', '$passwordEntry', '$firstNameEntry', '$lastNameEntry', '$emailEntry', '$weightEntry', '$heightEntry', '$ageEntry', '$activityEntry', '$sexEntry', '$breastfeedingEntry')";
+		$sql = "INSERT INTO Users (username, password, firstName, lastName, email, weight, height, age) VALUES ('$usernameEntry', '$passwordEntry', '$firstNameEntry', '$lastNameEntry', '$emailEntry', '$weightEntry', '$heightEntry', '$ageEntry')";
 
 		if (mysqli_query($conn, $sql)) {
 			echo "Info saved";
