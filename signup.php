@@ -90,13 +90,13 @@
   
   <div class="form-group col-6">
     <label for="password">Password</label>
-    <input type="text" id="userpassword" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
+    <input type="password" id="userpassword" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
     
   </div>
   
   <div class="form-group col-6">
     <label>Password Confirm</label>
-    <input type="text" id="userpasswordconfirm" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
+    <input type="password" id="userpasswordconfirm" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
  
   </div>
   

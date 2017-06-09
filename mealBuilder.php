@@ -94,7 +94,7 @@ mysqli_close($conn);
 <head lang="en">
 	<meta charset="utf-8">
 	<title>Think Less Eat Better</title>
-	<link rel="stylesheet" type="text/css" href="css/mycss.css" />
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 
 </head>
 <body>
