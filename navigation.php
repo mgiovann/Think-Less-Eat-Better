@@ -14,6 +14,7 @@
 	echo "<li><a href=\"signup.php\">Sign-up</a></li>";	
 	echo "<li><a href=\"myaccount.php\">My Account</a></li>";
 	echo "<li><a href=\"logout.php\">Logout</a></li>";
+	echo "<li><a href=\"meanPlanner.php\">Meal Planner</a></li>";
 	echo "</nav></ul>";
 	
 ?>
