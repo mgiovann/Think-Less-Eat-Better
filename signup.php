@@ -65,6 +65,43 @@
 </script>
 
 <form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
+	<div class="form-group col-6">
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstname" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="First Name">
+  </div>
+
+  <div class="form-group col-6">
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastname" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Last Name">
+  </div>
+  
+  <div class="form-group col-6">
+    <label for="email">Email</label>
+    <input type="email" id="email" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Enter email">
+  </div>
+  
+  <div class="form-group col-6">
+    <label for="username">Username</label>
+    <input type="text" id="username" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="User Name">
+  </div>
+  
+  <div class="form-group col-6">
+    <label for="password">Password</label>
+    <input type="text" id="userpassword" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
+    
+  </div>
+  
+  <div class="form-group col-6">
+    <label>Password Confirm</label>
+    <input type="text" id="userpasswordconfirm" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
+ 
+  </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  
+  
+</form>
+	<!--
 	<fieldset>                    
 		<legend>Info</legend>
 		<label>First name</label>
@@ -88,6 +125,7 @@
 		<input type="submit">
 
 	</fieldset>
+	-->
 </form>
 
 <?php include 'footer.php'; ?>		
