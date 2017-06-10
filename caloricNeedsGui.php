@@ -33,8 +33,10 @@ else {
 	<?php
 	
 	if ($_SESSION["username"] == null) {
-		echo "Log in to see calculate caloric goals";
 		echo "<br><br>";
+		
+		echo "<h4 style=\"text-align:center;\">Log in to use caloric calculator</h4>";
+		
 	}
 	else {
 
@@ -61,7 +63,7 @@ else {
 		mysqli_close($conn);
 
 	}
-	echo "<br><br><br><br><br><br>";
+	echo "";
 	?>
 
 	<script type="text/javascript" src="caloricNeedsAlgo.js" charset="utf-8"></script>
@@ -215,7 +217,8 @@ else {
 	</table>
 
 </form> 
-<input type="submit" onclick="showInput();"><br/>
+
+<input type="submit" value="Calculate" onclick="showInput();"><br/>
 
 </div>
 
