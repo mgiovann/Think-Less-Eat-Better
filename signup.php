@@ -150,7 +150,7 @@
                 
                             <label for="weight">Weight (lbs)</label>
                 
-                            <input type="text" id="username" name = "weight" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Weight (lbs)">
+                            <input type="text" id="weight" name = "weight" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Weight (lbs)">
             
                         </div>
             
@@ -158,7 +158,7 @@
                 
                             <label for="Height">Height</label>
                 
-                            <input type="text" id="username" name = "height" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Height">
+                            <input type="text" id="height" name = "height" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Height">
             
                         </div>
             
@@ -166,7 +166,7 @@
             
                             <label for="age">Age</label>
                 
-                            <input type="text" id="username" name = "age" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Age">
+                            <input type="text" id="age" name = "age" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Age">
           
                         </div>
       
