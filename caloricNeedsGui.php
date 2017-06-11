@@ -68,104 +68,109 @@ else {
 
 	<script type="text/javascript" src="caloricNeedsAlgo.js" charset="utf-8"></script>
 
-	<div id="bg">
+<div id="bg">
 
-		<div id="header">
-			Think Less, Eat Better
-		</div>
-
-		<div id="subHeading"> Get a daily calorie recommendation to meet your goals. </div>
+	<div id="header">
+	Think Less, Eat Better
+	</div>
+	
+	<div id="subHeading"> Get a daily calorie recommendation to meet your goals. </div>
 		
 		<div id="thumbnailText">
-
+		
 			<div id = "formDiv">
-				<form>
+			<form>
+		
+			<table align="center">
+			<tr>
+			<!--
+			<td>
+			User name: <br><input type="text" name="user_name" placeholder="Username" size="20" id="user_input">
+			<p>
+			
+			Index of objects under test <br>(1 and 0 supported. Add  more objects to array manually):<br>
+			User ID#: <br><input type="text" name="user_index" placeholder="Stats" size="20" id="usr_index"><p>
+			
+			<p>
+			</td>
+  
+			<td id="space">
+			</td>
+				
+			-->			
+			
+			<td valign="top">
+			 
+			<!-- ************************************** -->
+			<!-- DISPLAY USERNAME - given as text input -->
+			<!-- ************************************** -->
+			<label id="name">Recommendations for: <?php echo "$username"; ?></label>
+			<span id='display'></span><br>
+			
+			<!--
+			<label id="ID">User ID: </label>
+			<span id='userIndex'></span> -->
+			<p>
+			
+			
+			<!-- ******************************************** -->
+			<!-- DISPLAY CALCULATIONS - computed by algorithm -->
+			<!-- ******************************************** -->
+			<div id="results">
+			<table width="100%">
+			
+			<tr>
+			<td>Calories per day: </td>
+			<td id="calories"></td>
+			</tr>
+			
+			<tr>
+			<td>Goal weight: </td>
+			<td id="goalWeight"></td>
+			</tr>
+			
+			<tr>
+			<td>Goal date: </td>
+			<td id="goalDate"></td>
+			</tr>
+			
+			<tr>
 
-					<table align="center">
-						<tr>
-							<td>
-								User name: <br><input type="text" name="user_name" placeholder="Username" size="20" id="user_input">
-								<p>
+			
+			</table>
+			</div>
+			
 
-									Index of objects under test <br>(1 and 0 supported. Add  more objects to array manually):<br>
-									User ID#: <br><input type="text" name="user_index" placeholder="Stats" size="20" id="usr_index"><p>
-
-									<p>
-									</td>
-
-									<td id="space">
-									</td>
-
-									<td valign="top">
-
-										<!-- ************************************** -->
-										<!-- DISPLAY USERNAME - given as text input -->
-										<!-- ************************************** -->
-										<label id="name">Recommendations for: <?php echo "$username"; ?> </label>
-										<span id='display'></span><br>
-										<!-- <label id="ID">User ID: </label> -->
-										<span id='userIndex'></span>
-										<p>
-
-
-											<!-- ******************************************** -->
-											<!-- DISPLAY CALCULATIONS - computed by algorithm -->
-											<!-- ******************************************** -->
-											<div id="results">
-												<table width="100%">
-
-													<tr>
-														<td>Calories per day: </td>
-														<td id="calories"></td>
-													</tr>
-
-													<tr>
-														<td>Goal weight: </td>
-														<td id="goalWeight"></td>
-													</tr>
-
-													<tr>
-														<td>Goal date: </td>
-														<td id="goalDate"></td>
-													</tr>
-
-													<tr>
-
-
-													</table>
-												</div>
-
-
-												<script>
-
-													function showInput() {
-														USERID = document.getElementsByName("user_index")[0].value;
-
-														document.getElementById('display').innerHTML = 
-														document.getElementById("user_input").value;
-
-														document.getElementById('userIndex').innerHTML = 
-														document.getElementById("usr_index").value;
-
+			<script>
+			
+			function showInput() {
+					//USERID = document.getElementsByName("user_index")[0].value;
+					USERID = 0;
+				
+					//document.getElementById('display').innerHTML = 
+                    //document.getElementById("user_input").value;
+					
+					//document.getElementById('userIndex').innerHTML = 
+                    //document.getElementById("usr_index").value;
+					
 					//Run algorithm to get plan object
-					var functionPlan = caloricNeedsAlgorithm(StatsArray[0], GoalsArray[1]);
-
+					var functionPlan = caloricNeedsAlgorithm(StatsArray[USERID], GoalsArray[USERID]);
+			
 					//Pull results values from plan object
 					var numberOfCalories = functionPlan.dailyAllowedCalories;
 					var goalWeight = functionPlan.goalWeight;
 					var goalDate = functionPlan.goalDate;
-
+			
 					var CALORIES = numberOfCalories;
 					document.getElementById("calories").innerHTML = CALORIES;
-
+			
 					var GWEIGHT = goalWeight;
 					document.getElementById("goalWeight").innerHTML = GWEIGHT;
-
+			
 					var GDATE = goalDate;
 					GDATE = goalDate.toISOString().slice(0, 10);
 					document.getElementById("goalDate").innerHTML = GDATE;
-				}
-
+			}
 			//**************************
 			//Build testable classes
 			//**************************
