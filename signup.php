@@ -67,7 +67,7 @@
 
 	</script>
 
-	<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
+<!-- 	<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
 		<fieldset>                    
 			<legend>Info</legend>
 			<label>First name</label>
@@ -103,8 +103,8 @@
 			<input type="submit">
 
 		</fieldset>
-	</form>
-<!-- <form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
+	</form> -->
+<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
 <fieldset>
 
 	 
@@ -178,7 +178,7 @@
       <button type="submit" class="btn btn-primary">Submit</button>
 </fieldset>
   
-</form> -->
+</form>
 	<!--
 	<fieldset>                    
 		<legend>Info</legend>
