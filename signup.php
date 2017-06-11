@@ -105,40 +105,85 @@
 		</fieldset>
 	</form>
 <!-- <form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
-	<div class="form-group col-6">
-    <label for="firstName">First Name</label>
-    <input type="text" id="firstname" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="First Name">
-  </div>
+<fieldset>
 
-  <div class="form-group col-6">
-    <label for="lastName">Last Name</label>
-    <input type="text" id="lastname" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Last Name">
-  </div>
+	 
+<div class="container">
+      
+      <div class="row">
+        
+        <div class="col-6 text-center">
+      
+          
+          <div class="form-group col-10">
+          
+            <label for="firstName">First Name</label>
+          
+            <input type="text" id="firstname" name = "first" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="First Name">
+        
+          </div>
+      
+          <div class="form-group col-10">
+          
+            <label for="lastName">Last Name</label>
+           
+            <input type="text" id="lastname" name = "last" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Last Name">
+        
+          </div>
   
-  <div class="form-group col-6">
-    <label for="email">Email</label>
-    <input type="email" id="email" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Enter email">
-  </div>
-  
-  <div class="form-group col-6">
-    <label for="username">Username</label>
-    <input type="text" id="username" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="User Name">
-  </div>
-  
-  <div class="form-group col-6">
-    <label for="password">Password</label>
-    <input type="password" id="userpassword" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
+          <div class="form-group col-10">
+          
+            <label for="email">Email</label>
+          
+            <input type="email" id="email" name = "email" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Enter email">
+        
+          </div>
+
+        </div>
     
-  </div>
+        <div class="col-6 text-center">
+    
+          <div class="form-group col-10">
+          
+            <label for="username">Username</label>
+          
+            <input type="text" id="username" name = "user" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="User Name">
+        
+          </div>
   
-  <div class="form-group col-6">
-    <label>Password Confirm</label>
-    <input type="password" id="userpasswordconfirm" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
+        
+          <div class="form-group col-10">
+          
+            <label for="password">Password</label>
+          
+            <input type="text" id="userpassword" name = "password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
+        
+          </div>
+  
+        
+          <div class="form-group col-10">
+          
+            <label>Password Confirm</label>
+          
+            <input type="text" id="userpasswordconfirm" name = "passwordconfirm" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
+        
+          </div>
  
-  </div>
-  
-    <button type="submit" class="btn btn-primary">Submit</button>
-  
+        </div>
+        
+      </div>
+
+<div class="form-group col-10">
+          
+            <label Weight (lbs)</label>
+          
+            <input type = "text"  name = "weight" id = "usertextconfirm">
+        
+          </div>
+
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+</fieldset>
   
 </form> -->
 	<!--
