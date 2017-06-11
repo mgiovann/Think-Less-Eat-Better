@@ -131,7 +131,7 @@
 
 								<div class="form-group col-10">
 
-									<label for="Height">Height</label>
+									<label for="Height">Height (inches)</label>
 
 									<input type="text" id="height" name = "height" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Height">
 
