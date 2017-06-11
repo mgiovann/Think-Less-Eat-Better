@@ -173,13 +173,6 @@
         
       </div>
 
-<div class="form-group col-10">
-          
-            <label Weight (lbs)</label>
-          
-            <input type = "text"  name = "weight" id = "usertextconfirm">
-        
-          </div>
 
       
       <button type="submit" class="btn btn-primary">Submit</button>
