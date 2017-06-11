@@ -201,7 +201,7 @@ else {
 				false);
 
 			var Goals = new UserGoals(  120,
-				1);
+				0.1);
 
 			var Goals1 = new UserGoals(  200,
 				3);
