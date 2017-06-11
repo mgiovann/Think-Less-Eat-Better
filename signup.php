@@ -108,74 +108,102 @@
 <fieldset>
 
 	 
-<div class="container">
-      
-      <div class="row">
-        
-        <div class="col-6 text-center">
-      
-          
-          <div class="form-group col-10">
-          
-            <label for="firstName">First Name</label>
-          
-            <input type="text" id="firstname" name = "first" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="First Name">
-        
-          </div>
-      
-          <div class="form-group col-10">
-          
-            <label for="lastName">Last Name</label>
-           
-            <input type="text" id="lastname" name = "last" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Last Name">
-        
-          </div>
+<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
   
-          <div class="form-group col-10">
-          
-            <label for="email">Email</label>
-          
-            <input type="email" id="email" name = "email" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Enter email">
-        
-          </div>
+        <fieldset>
 
-        </div>
+            <div class="container">      
+      
+                <div class="row">
+        
+                    <div class="col-6 text-center">
+          
+                        <div class="form-group col-10">
+            
+                            <label for="firstName">First Name</label>
+            
+                            <input type="text" id="firstname" name = "first" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="First Name">
+          
+                        </div>
+          
+                        <div class="form-group col-10">
+            
+                            <label for="lastName">Last Name</label>
+            
+                            <input type="text" id="lastname" name = "last" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Last Name">
+          
+                        </div>
+            
+                        <div class="form-group col-10">
+                
+                            <label for="username">Username</label>
+                
+                            <input type="text" id="username" name = "user" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="User Name">
+            
+                        </div>
+  
+                    </div>  
+        
+                    <div class="col-6 text-center">
+            
+                        <div class="form-group col-10">
+                
+                            <label for="weight">Weight (lbs)</label>
+                
+                            <input type="text" id="username" name = "weight" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Weight (lbs)">
+            
+                        </div>
+            
+                        <div class="form-group col-10">
+                
+                            <label for="Height">Height</label>
+                
+                            <input type="text" id="username" name = "height" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Height">
+            
+                        </div>
+            
+                        <div class="form-group col-10">
+            
+                            <label for="age">Age</label>
+                
+                            <input type="text" id="username" name = "age" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Age">
+          
+                        </div>
+      
+                    </div>
+          
+                    <div class="container">
+                         
+                        <div class="form-group col-10">
+                  
+                            <label for="email">Email</label>
+                  
+                            <input type="email" id="email" name = "email" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Enter email">
     
-        <div class="col-6 text-center">
-    
-          <div class="form-group col-10">
-          
-            <label for="username">Username</label>
-          
-            <input type="text" id="username" name = "user" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="User Name">
-        
-          </div>
-  
-        
-          <div class="form-group col-10">
-          
-            <label for="password">Password</label>
-          
-            <input type="text" id="userpassword" name = "password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
-        
-          </div>
-  
-        
-          <div class="form-group col-10">
-          
-            <label>Password Confirm</label>
-          
-            <input type="text" id="userpasswordconfirm" name = "passwordconfirm" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
-        
-          </div>
- 
-        </div>
-        
-      </div>
+                        </div>
 
+                        <div class="form-group col-10">
 
-      
-      <button type="submit" class="btn btn-primary">Submit</button>
+                            <label for="password">Password</label>
+   
+                            <input type="password" id="userpassword" name = "password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
+
+                        </div>
+
+                        <div class="form-group col-10">
+
+                            <label>Password Confirm</label>
+
+                            <input type="password" id="userpasswordconfirm" name = "passwordconfirm" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
 </fieldset>
   
 </form>
