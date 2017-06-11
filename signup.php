@@ -16,7 +16,9 @@
 	<br>
 	<h3>Sign-up</h3>	
 	<script type="text/javascript">
-
+		
+		//return false if form does not contain legitimate inputs. Otherwise return true.
+		//checks if fields are empty, checks that passwords match, ensures that email address is in correct format.
 		function formvalidate(myform)
 		{
 			if(myform.firstname.value == "") 
@@ -61,7 +63,8 @@
 				myform.userpassword.focus();
 				return false;
 			}
-			//http://www.w3resource.com/javascript/form/email-validation.php
+			
+			// adapted from http://www.w3resource.com/javascript/form/email-validation.php
 			//regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.
 			
 			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myform.email.value)==false)  

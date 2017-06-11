@@ -1,0 +1,184 @@
+This test suite was created to test the formvalidate function used in the creation of the account creation user story.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+	<p>Form test suite. Click the tests to automatically fill form with prepared test values then click submit. Form should alert with an error on all but test 1</p>
+
+	<script type="text/javascript">
+		
+		//return false if form does not contain legitimate inputs. Otherwise return true.
+		//checks if fields are empty, checks that passwords match, ensures that email address is in correct format. 
+		function formvalidate(myform)
+		{
+			if(myform.firstname.value == "") 
+			{
+				alert("Firstname can't be blank!");
+				myform.firstname.focus();
+				return false;
+			}
+			if(myform.lastname.value == "") 
+			{
+				alert("Last name can't be blank!");
+				myform.lastname.focus();
+				return false;
+			}
+			if(myform.email.value == "") 
+			{
+				alert("email can't be blank!");
+				myform.email.focus();
+				return false;
+			}	
+			if(myform.username.value == "") 
+			{
+				alert("Username can't be blank!");
+				myform.username.focus();
+				return false;
+			}
+			if(myform.userpassword.value == "") 
+			{
+				alert("password can't be blank!");
+				myform.userpassword.focus();
+				return false;
+			}
+			if(myform.passwordconfirm.value == "") 
+			{
+				alert("password can't be blank!");
+				myform.userpassword.focus();
+				return false;
+			}
+			if(myform.userpassword.value != myform.passwordconfirm.value) 
+			{
+				alert("Passwords do not match!");
+				myform.userpassword.focus();
+				return false;
+			}
+			// adapted from http://www.w3resource.com/javascript/form/email-validation.php
+			//regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.
+			
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myform.email.value)==false)  
+			{  
+				alert("Please enter a valid email address");
+				return false
+			}  
+
+
+			//all checks pass return true 
+			return true;
+		}
+
+
+	</script>
+	<br>
+	<button onclick="formTest1()">Test 1, good values</button>
+	<script>
+		function formTest1() {
+			document.getElementById("firstname").value = "John";
+			document.getElementById("lastname").value = "Doe";
+			document.getElementById("email").value = "jdoe@gmail.com";
+			document.getElementById("username").value = "jdoe";
+			document.getElementById("userpassword").value = "password";
+			document.getElementById("userpasswordconfirm").value = "password";
+			document.getElementById("userweightconfirm").value = "145";
+			document.getElementById("userheightconfirm").value = "72";
+			document.getElementById("userageconfirm").value = "40";
+
+
+		}
+	</script>
+	<br><br><br>
+	<button onclick="formTest2()">Test 2, passwords don't match</button>
+	<script>
+		function formTest2() {
+			document.getElementById("firstname").value = "John";
+			document.getElementById("lastname").value = "Doe";
+			document.getElementById("email").value = "jdoe@gmail.com";
+			document.getElementById("username").value = "jdoe";
+			document.getElementById("userpassword").value = "password";
+			document.getElementById("userpasswordconfirm").value = "pasword";
+			document.getElementById("userweightconfirm").value = "145";
+			document.getElementById("userheightconfirm").value = "72";
+			document.getElementById("userageconfirm").value = "40";
+
+
+		}
+	</script>
+	<br><br><br>
+	<button onclick="formTest3()">Test 3, bad email</button>
+	<script>
+		function formTest3() {
+			document.getElementById("firstname").value = "John";
+			document.getElementById("lastname").value = "Doe";
+			document.getElementById("email").value = "jdoegmail.com";
+			document.getElementById("username").value = "jdoe";
+			document.getElementById("userpassword").value = "password";
+			document.getElementById("userpasswordconfirm").value = "password";
+			document.getElementById("userweightconfirm").value = "145";
+			document.getElementById("userheightconfirm").value = "72";
+			document.getElementById("userageconfirm").value = "40";
+
+
+		}
+	</script>
+	<br><br><br>
+	<button onclick="formTest4()">Test 4, blank username</button>
+	<script>
+		function formTest4() {
+			document.getElementById("firstname").value = "John";
+			document.getElementById("lastname").value = "Doe";
+			document.getElementById("email").value = "jdoe@gmail.com";
+			document.getElementById("username").value = "";
+			document.getElementById("userpassword").value = "password";
+			document.getElementById("userpasswordconfirm").value = "password";
+			document.getElementById("userweightconfirm").value = "145";
+			document.getElementById("userheightconfirm").value = "72";
+			document.getElementById("userageconfirm").value = "40";
+
+
+		}
+	</script>
+	<br><br><br><br>
+	<form id = "formID" method="post" onsubmit="return formvalidate(this);">
+		<fieldset>                    
+			<legend>Info</legend>
+			<label>First name</label>
+			<input type = "text"  name = "first" id = "firstname" ><br>	
+			<br>	
+			<label>Last name</label>
+			<input type = "text"  name = "last" id = "lastname" ><br>
+			<br>	
+			<label>Email</label>	
+			<input type = "text"  name = "email" id = "email" ><br><br>	
+			<label>Username</label>	
+			<input type = "text"  name = "user" id = "username" ><br>	
+			<br>						
+			<label>Password</label>	
+			<input type = "password"  name = "password" id = "userpassword" ><br>
+			<br>	
+			<label>Password Confirm</label>
+			<input type = "password"  name = "passwordconfirm" id = "userpasswordconfirm" >
+
+			<br><br><br>
+			<label>Weight (lbs)</label>
+			<input type = "text"  name = "weight" id = "userweightconfirm" >
+			<br><br>
+			<label>Height</label>
+			<input type = "text"  name = "height" id = "userheightconfirm" >
+			<br><br>
+			<label>age</label>
+			<input type = "text"  name = "age" id = "userageconfirm" >
+			<br><br>
+
+
+			<br><br>
+			<input type="submit">
+
+		</fieldset>
+	</form>
+
+
+
+
+</body>
+</html>
