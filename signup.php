@@ -61,177 +61,128 @@
 				myform.userpassword.focus();
 				return false;
 			}
+			//http://www.w3resource.com/javascript/form/email-validation.php
+			//regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.
+			
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myform.email.value)==false)  
+			{  
+				alert("Please enter a valid email address");
+				return false
+			}  
+ 
+
+			//all checks pass return true 
 			return true;
 		}
 
 
 	</script>
 
-<!-- 	<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
-		<fieldset>                    
-			<legend>Info</legend>
-			<label>First name</label>
-			<input type = "text"  name = "first" id = "firstname" ><br>	
-			<br>	
-			<label>Last name</label>
-			<input type = "text"  name = "last" id = "lastname" ><br>
-			<br>	
-			<label>Email</label>	
-			<input type = "text"  name = "email" id = "email" ><br><br>	
-			<label>Username</label>	
-			<input type = "text"  name = "user" id = "username" ><br>	
-			<br>						
-			<label>Password</label>	
-			<input type = "password"  name = "password" id = "userpassword" ><br>
-			<br>	
-			<label>Password Confirm</label>
-			<input type = "password"  name = "passwordconfirm" id = "userpasswordconfirm" >
 
-			<br><br><br>
-			<label>Weight (lbs)</label>
-			<input type = "text"  name = "weight" id = "usertextconfirm" >
-			<br><br>
-			<label>Height</label>
-			<input type = "text"  name = "height" id = "usertextconfirm" >
-			<br><br>
-			<label>age</label>
-			<input type = "text"  name = "age" id = "usertextconfirm" >
-			<br><br>
+	<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
+		<fieldset>
 
 
-			<br><br>
-			<input type="submit">
+			<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
 
-		</fieldset>
-	</form> -->
-<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
-<fieldset>
+				<fieldset>
 
-	 
-<form action = "accountProcess.php" method="post" onsubmit="return formvalidate(this);">
-  
-        <fieldset>
+					<div class="container">      
 
-            <div class="container">      
-      
-                <div class="row">
-        
-                    <div class="col-6 text-center">
-          
-                        <div class="form-group col-10">
-            
-                            <label for="firstName">First Name</label>
-            
-                            <input type="text" id="firstname" name = "first" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="First Name">
-          
-                        </div>
-          
-                        <div class="form-group col-10">
-            
-                            <label for="lastName">Last Name</label>
-            
-                            <input type="text" id="lastname" name = "last" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Last Name">
-          
-                        </div>
-            
-                        <div class="form-group col-10">
-                
-                            <label for="username">Username</label>
-                
-                            <input type="text" id="username" name = "user" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="User Name">
-            
-                        </div>
-  
-                    </div>  
-        
-                    <div class="col-6 text-center">
-            
-                        <div class="form-group col-10">
-                
-                            <label for="weight">Weight (lbs)</label>
-                
-                            <input type="text" id="weight" name = "weight" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Weight (lbs)">
-            
-                        </div>
-            
-                        <div class="form-group col-10">
-                
-                            <label for="Height">Height</label>
-                
-                            <input type="text" id="height" name = "height" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Height">
-            
-                        </div>
-            
-                        <div class="form-group col-10">
-            
-                            <label for="age">Age</label>
-                
-                            <input type="text" id="age" name = "age" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Age">
-          
-                        </div>
-      
-                    </div>
-          
-                    <div class="container">
-                         
-                        <div class="form-group col-10">
-                  
-                            <label for="email">Email</label>
-                  
-                            <input type="email" id="email" name = "email" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Enter email">
-    
-                        </div>
+						<div class="row">
 
-                        <div class="form-group col-10">
+							<div class="col-6 text-center">
 
-                            <label for="password">Password</label>
-   
-                            <input type="password" id="userpassword" name = "password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
+								<div class="form-group col-10">
 
-                        </div>
+									<label for="firstName">First Name</label>
 
-                        <div class="form-group col-10">
+									<input type="text" id="firstname" name = "first" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="First Name">
 
-                            <label>Password Confirm</label>
+								</div>
 
-                            <input type="password" id="userpasswordconfirm" name = "passwordconfirm" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
+								<div class="form-group col-10">
 
-                        </div>
+									<label for="lastName">Last Name</label>
 
-                    </div>
+									<input type="text" id="lastname" name = "last" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Last Name">
 
-                </div>
+								</div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+								<div class="form-group col-10">
 
-</fieldset>
-  
-</form>
-	<!--
-	<fieldset>                    
-		<legend>Info</legend>
-		<label>First name</label>
-		<input type = "text"  name = "first" id = "firstname" ><br>	
-		<br>	
-		<label>Last name</label>
-		<input type = "text"  name = "last" id = "lastname" ><br>
-		<br>	
-		<label>Email</label>	
-		<input type = "text"  name = "email" id = "email" ><br><br>	
-		<label>Username</label>	
-		<input type = "text"  name = "user" id = "username" ><br>	
-		<br>						
-		<label>Password</label>	
-		<input type = "password"  name = "password" id = "userpassword" ><br>
-		<br>	
-		<label>Password Confirm</label>
-		<input type = "password"  name = "passwordconfirm" id = "userpasswordconfirm" >
-		
-		<br><br>
-		<input type="submit">
+									<label for="username">Username</label>
 
-	</fieldset>
--->
+									<input type="text" id="username" name = "user" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="User Name">
+
+								</div>
+
+							</div>  
+
+							<div class="col-6 text-center">
+
+								<div class="form-group col-10">
+
+									<label for="weight">Weight (lbs)</label>
+
+									<input type="text" id="weight" name = "weight" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Weight (lbs)">
+
+								</div>
+
+								<div class="form-group col-10">
+
+									<label for="Height">Height</label>
+
+									<input type="text" id="height" name = "height" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Height">
+
+								</div>
+
+								<div class="form-group col-10">
+
+									<label for="age">Age</label>
+
+									<input type="text" id="age" name = "age" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Age">
+
+								</div>
+
+							</div>
+
+							<div class="container">
+
+								<div class="form-group col-10">
+
+									<label for="email">Email</label>
+
+									<input type="email" id="email" name = "email" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Enter email">
+
+								</div>
+
+								<div class="form-group col-10">
+
+									<label for="password">Password</label>
+
+									<input type="password" id="userpassword" name = "password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
+
+								</div>
+
+								<div class="form-group col-10">
+
+									<label>Password Confirm</label>
+
+									<input type="password" id="userpasswordconfirm" name = "passwordconfirm" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<button type="submit" class="btn btn-primary">Submit</button>
+
+					</fieldset>
+
+				</form>
+
 </form>
 
 <?php include 'footer.php'; ?>		
