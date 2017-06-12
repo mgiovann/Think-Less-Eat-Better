@@ -14,6 +14,7 @@ Setup:
 
 1. Host files on a server with PHP 5 and mySQL access (project should run on flip without further installation). Project directory structure must be kept in order to ensure that all parts function.
 2. Edit config.php so that the DBHOST, DBNAME, DBUSER and DBPASS variables contain the correct credentials of your database.
+3. Import Meal-Builder-Tables.sql to your database. 
 
 Unit tests:
 
