@@ -14,7 +14,19 @@ Setup:
 
 1. Host files on a server with PHP 5 and mySQL access (project should run on flip without further installation). Project directory structure must be kept in order to ensure that all parts function.
 2. Edit config.php so that the DBHOST, DBNAME, DBUSER and DBPASS variables contain the correct credentials of your database.
-3. Import Meal-Builder-Tables.sql to your database. 
+3. Import Meal-Builder-Tables.sql and Users.sql to your database. 
+
+Operation:
+
+1. Navigate to http://web.engr.oregonstate.edu/~giovanmi/361/projectB/signup.php
+2. Sign up with an original username. Currently there is no requirerment to enter height weight and age and if you leave them blank or enter improper characters they will default to 0.
+3. Navigate to 'My Account' and you can see your saved information.
+4. Click the logout button.
+5. Navigate http://web.engr.oregonstate.edu/~giovanmi/361/projectB/login.php and enter your username and password.
+6. Click the Meal Builder tab and search for a food (try something like 'apple' or 'potato chips')
+7. Select the amount of food you want to add to your meal plan and hit add.
+8. You can now search for further foods and add them to your meal plan. Note: the mealbuilder app is not currently integrated with the user profiles but the information will be saved to the database nonetheless.
+
 
 Unit tests:
 

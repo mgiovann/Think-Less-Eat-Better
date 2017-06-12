@@ -4,7 +4,7 @@
 define('DBHOST', 'oniddb.cws.oregonstate.edu');
 define('DBNAME', 'giovanmi-db');
 define('DBUSER', 'giovanmi-db');
-define('DBPASS', '1GLHL4ZTdIFcwAsP');
+define('DBPASS', '**********');
 
 $dbhost = DBHOST;
 $dbname = DBNAME;
